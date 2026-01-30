@@ -36,6 +36,7 @@ function handleOutGoingMessage(e){
                 </div>`
     const incomingMessageDiv = createMessageElm(messageContent, 'bot-message')
     chatBody.appendChild(incomingMessageDiv)
+    generateBotRespond ()
     }, 600)
 }
 
