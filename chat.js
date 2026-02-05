@@ -2,13 +2,27 @@ const messageInput = document.querySelector('.message-input')
 const chatBody = document.querySelector('.chat-body')
 const sendButton = document.querySelector('.send')
 
+// const API_KEY = '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'
+const API_KEY = 'AIzaSyCjO3D8KWW_GbZ0xFSVUGAIlaXuNRJsdlU'
+const API_URL = 'https://openrouter.ai/api/v1/chat/completions'
+async function respond() {
+    const res = await fetch('API_URL')
+    const data = await res.json
+    console.log(data)
+}
+respond()
+
 // handle Enter key press for sending message
 
-const createMessageElm = (content , classes) => {
+const createMessageElm = (content , ...classes) => {
     const div = document.createElement('div')
-    div.classList.add('message' , classes)
+    div.classList.add('message' , ...classes)
    div.innerHTML = content 
    return div
+}
+
+function generateBotRespond(){
+
 }
 
 const userData = {
@@ -34,7 +48,7 @@ function handleOutGoingMessage(e){
                         <div class="dot"></div>
                     </div>
                 </div>`
-    const incomingMessageDiv = createMessageElm(messageContent, 'bot-message')
+    const incomingMessageDiv = createMessageElm(messageContent, 'bot-message', 'thinking')
     chatBody.appendChild(incomingMessageDiv)
     generateBotRespond ()
     }, 600)
@@ -48,5 +62,3 @@ messageInput.addEventListener('keydown', (e) => {
 })
 
 sendButton.addEventListener('click' , (e) => handleOutGoingMessage(e))
-
-console.log('hello')
