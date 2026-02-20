@@ -59,6 +59,7 @@ messageInput.addEventListener('keydown', (e) => {
     if(e.key === 'Enter' && userMessage){
     handleOutGoingMessage(e)
     }
+    console.log(userMessage)
 })
 
 sendButton.addEventListener('click' , (e) => handleOutGoingMessage(e))
