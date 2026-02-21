@@ -6,8 +6,8 @@ const sendButton = document.querySelector('.send')
 const API_KEY = 'AIzaSyCjO3D8KWW_GbZ0xFSVUGAIlaXuNRJsdlU'
 const API_URL = 'https://openrouter.ai/api/v1/chat/completions'
 async function respond() {
-    const res = await fetch('API_URL')
-    const data = await res.json
+    const res = await fetch(API_URL)
+    const data = await res.json()
     console.log(data)
 }
 respond()
