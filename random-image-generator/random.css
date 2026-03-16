@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    :root {
+  --color-primary: #5C56E1;
+  --color-primary-dark: #5b21b6;
+  --color-accent: #8B5CF6;
+  --color-card: #FFFFFF;
+  --color-input: #F1F1FF;
+  --color-text: #09090E;
+  --color-placeholder: #5C5A87;
+  --color-border: #D4D4ED;
+  --color-gradient: linear-gradient(135deg, #5C56E1, #8B5CF6);
+}
+}
