@@ -1,4 +1,4 @@
-<script>
+
   // We use Pollinations.ai free API — no key required
   const BASE = 'https://image.pollinations.ai/prompt/';
 
@@ -106,4 +106,3 @@
   document.getElementById('prompt').addEventListener('keydown', e => {
     if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) generate();
   });
-</script>
