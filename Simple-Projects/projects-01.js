@@ -8,3 +8,28 @@ const question = [
         ]
     }
 ]
+
+let currentQuestionIndex = 0
+function showQuestion(){
+    let html = ''
+    question.forEach((q) => {
+        const question = q.question 
+        q.answer.forEach((a) => {
+            const ans = a.text
+            const opt = a.guess
+
+            let htmlQuestion = `
+            <div>${question}</div>
+            <div>${ans}</div>
+            <div>${opt}</div>
+    `
+        })
+    
+    html += htmlQuestion
+    })
+
+    document.querySelector('.container')
+     .innerHTML = html
+}
+
+showQuestion()
