@@ -22,10 +22,10 @@ function showQuestion(){
             <div>${question}</div>
             <div>${ans}</div>
             <div>${opt}</div>
-    `
+            `
+            html += htmlQuestion
         })
     
-    html += htmlQuestion
     })
 
     document.querySelector('.container')
@@ -33,3 +33,12 @@ function showQuestion(){
 }
 
 showQuestion()
+
+const URL = 'https://opentdb.com/api.php?amount=30'
+async function quiz() {
+    const res = await fetch(URL)
+    const data =  await res.json()
+    console.log(data)
+}
+
+quiz()
