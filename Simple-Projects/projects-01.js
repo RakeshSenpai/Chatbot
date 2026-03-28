@@ -11,6 +11,8 @@ const question = [
 
 let currentQuestionIndex = 0
 function showQuestion(){
+
+
     let html = ''
     question.forEach((q) => {
         const question = q.question 
